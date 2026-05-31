@@ -1,0 +1,12 @@
+orchestrator/runs/*
+!orchestrator/runs/.gitkeep
+
+.aiagent/runs/*
+!.aiagent/runs/.gitkeep
+
+__pycache__/
+*.pyc
+.venv/
+.env
+*.log
+.DS_Store

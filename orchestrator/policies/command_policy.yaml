@@ -1,0 +1,15 @@
+forbidden_commands:
+  - "rm -rf"
+  - "sudo"
+  - "git reset --hard"
+  - "git clean -fdx"
+  - "chmod -R 777"
+
+allowed_validation_commands:
+  - ".venv/bin/python -m pytest"
+  - "bash orchestrator/validators/check_diff.sh"
+  - "bash orchestrator/validators/smoke_report.sh"
+  - ".venv/bin/python orchestrator/validators/policy_check.py"
+  - ".venv/bin/python orchestrator/validators/final_report_check.py"
+  - "git status"
+  - "git diff"

@@ -1,0 +1,32 @@
+antigravity_cli:
+  cooldown_until: '2026-05-31T17:03:58.413908'
+  enabled: true
+  last_error: runner_missing
+  quality_score: 0.86
+  quota_state: black
+  role:
+  - review_only
+  - large_context_review
+  - final_review
+claude_code:
+  cooldown_until: '2026-05-31T17:12:25.419520'
+  enabled: true
+  last_error: rate_limit
+  quality_score: 0.93
+  quota_state: red
+  role:
+  - primary_coding
+  - refactor
+  - test_fix
+  - documentation
+codex_cli:
+  cooldown_until: '2026-05-31T17:12:25.430904'
+  enabled: true
+  last_error: rate_limit
+  quality_score: 0.84
+  quota_state: red
+  role:
+  - fallback_coding
+  - small_patch
+  - test_add
+  - documentation

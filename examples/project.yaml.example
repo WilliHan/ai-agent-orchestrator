@@ -1,0 +1,31 @@
+project:
+  name: "example-project"
+  root: "/path/to/project"
+
+orchestrator:
+  path: "/home/mhhan/projects/ai-agent-orchestrator"
+
+validation:
+  python: ".venv/bin/python"
+  pytest: ".venv/bin/python -m pytest"
+
+forbidden:
+  files:
+    - ".env"
+    - "analysis.db"
+  dirs:
+    - "reports/"
+    - ".git/"
+
+runtime:
+  runs_dir: ".aiagent/runs"
+  reports_dir: ".aiagent/reports"
+
+agents:
+  claude_code:
+    enabled: true
+  codex_cli:
+    enabled: true
+  antigravity_cli:
+    enabled: true
+    role: "review_only"

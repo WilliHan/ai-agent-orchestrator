@@ -1,0 +1,74 @@
+routing:
+  documentation:
+    primary: claude_code
+    fallback:
+      - codex_cli
+
+  python_code_fix:
+    primary: claude_code
+    fallback:
+      - codex_cli
+
+  test_fix:
+    primary: claude_code
+    fallback:
+      - codex_cli
+
+  refactor:
+    primary: claude_code
+    fallback:
+      - codex_cli
+
+  large_context_review:
+    primary: antigravity_cli
+    fallback:
+      - claude_code
+      - codex_cli
+
+  final_review:
+    primary: antigravity_cli
+    fallback:
+      - manual_review
+
+quota_policy:
+  rate_limit_keywords:
+    - "rate limit"
+    - "usage limit"
+    - "quota exceeded"
+    - "too many requests"
+    - "limit reached"
+    - "try again later"
+    - "429"
+    - "insufficient quota"
+
+  on_rate_limit:
+    write_handoff_state: true
+    switch_agent: true
+
+  on_runner_missing:
+    write_handoff_state: true
+    switch_agent: true
+
+  on_agent_error:
+    write_handoff_state: true
+    switch_agent: true
+
+agent_selection_policy:
+  exclude_states:
+    - red
+    - black
+
+  yellow_disallow_task_weight:
+    - heavy
+
+  min_quality_score: 0.70
+
+  record_selection_reason: true
+
+antigravity_policy:
+  role: review_only
+  can_modify_files: false
+  output_file: antigravity_review.md
+  on_runner_missing: warning
+  on_review_failed: needs_human_review
+

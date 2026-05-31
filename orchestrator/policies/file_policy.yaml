@@ -1,0 +1,17 @@
+forbidden_files:
+  - ".env"
+  - "analysis.db"
+
+forbidden_dirs:
+  - "reports/"
+  - ".git/"
+
+ignored_runtime_dirs:
+  - "orchestrator/runs/"
+
+allowed_default:
+  - "orchestrator/"
+  - "*.md"
+  - "docs/"
+  - "src/"
+  - "tests/"
