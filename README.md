@@ -55,3 +55,9 @@ python orchestrator/run_task.py \
 - Read 계열 명령은 무승인 진행
 - 간단한 edit은 무승인 진행
 - 위험 명령은 사용자 승인 필요
+
+## 한국어 사용 문서
+
+- [사용자 매뉴얼](docs/USER_MANUAL_KO.md)
+- [명령어 치트시트](docs/COMMAND_CHEATSHEET_KO.md)
+- [작업 예시](docs/WORKFLOW_EXAMPLES_KO.md)
